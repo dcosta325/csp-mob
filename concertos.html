@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concertos | CSP MOB</title>
+  <meta name="description" content="Próximo concerto da CSP MOB a 3 de dezembro de 2026 e concertos passados.">
+  <meta property="og:title" content="Concertos | CSP MOB">
+  <meta property="og:image" content="img/capas/csp-mob.jpg">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preload" href="fontes/anton.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+  <a class="proximo-evento" id="proximo-evento" href="discografia.html" aria-label="Nova música: GTA 6 CSP MOB, sai a 19 de novembro">
+    <img class="pe-capa" src="img/capas/gta6.jpg" alt="" width="64" height="64" onerror="this.remove()">
+    <span class="pe-etiqueta">● Nova música</span>
+    <span class="pe-titulo">“GTA 6 CSP MOB” · 19 nov</span>
+    <span class="pe-relogio" aria-hidden="true">Sai a 19 de novembro</span>
+  </a>
+  <header class="topo">
+    <a class="topo-logo" href="index.html" aria-label="CSP MOB, início"><img src="img/logo-preto.webp" alt="" width="480" height="394"></a>
+    <button type="button" class="menu-botao" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="discografia.html">Discografia</a></li>
+        <li><a href="membros.html">Membros</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="arquivo.html">Arquivo</a></li>
+        <li><a href="videos.html">Vídeos</a></li>
+        <li><a href="concertos.html" aria-current="page">Concertos</a></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <header class="pagina-topo">
+      <p class="etiqueta">Ao vivo</p>
+      <h1 class="cromado">Concertos</h1>
+      <p>Queres a CSP MOB no teu palco, festival ou evento?</p>
+      <div class="acoes" style="margin-top: 1.75rem">
+        <button type="button" class="botao" data-abrir-contratar>Contratar a CSP MOB</button>
+      </div>
+    </header>
+
+    <section class="seccao proximo" aria-labelledby="titulo-proximo">
+      <div>
+        <p class="etiqueta" id="titulo-proximo">Próximo concerto</p>
+        <p class="proximo-data cromado">03 dez<small>2026 · quinta-feira</small></p>
+        <p class="proximo-info">Local e hora a anunciar.<br>Segue o Instagram para saberes primeiro.</p>
+        <a class="botao" href="https://www.instagram.com/csp.mob/" target="_blank" rel="noopener">Seguir @csp.mob</a>
+      </div>
+      <img src="img/concerto.jpg" alt="Cosyä em palco à frente da lona com o logótipo da CSP MOB." width="900" height="1200" loading="lazy">
+    </section>
+
+    <dialog class="contratar" id="contratar" aria-labelledby="contratar-titulo">
+      <button type="button" class="contratar-fechar" data-fechar-contratar aria-label="Fechar">×</button>
+      <form class="contratar-form" id="contratar-form" novalidate>
+        <p class="etiqueta">Booking</p>
+        <h2 id="contratar-titulo" class="cromado">Contratar a CSP MOB</h2>
+        <p class="contratar-intro">Preenche o pedido. No fim abrimos uma mensagem para o Instagram do grupo com tudo já escrito.</p>
+
+        <fieldset class="contratar-tipo">
+          <legend>O que procuras?</legend>
+          <label><input type="radio" name="tipo" value="Concerto" checked><span>Concerto</span></label>
+          <label><input type="radio" name="tipo" value="Festival"><span>Festival</span></label>
+          <label><input type="radio" name="tipo" value="Abrir o concerto de outro artista"><span>Abrir um concerto</span></label>
+          <label><input type="radio" name="tipo" value="Evento privado"><span>Evento privado</span></label>
+        </fieldset>
+
+        <div class="campos">
+          <label class="campo">Nome<input name="nome" autocomplete="name" required></label>
+          <label class="campo">Evento ou organização<input name="evento" autocomplete="organization"></label>
+          <label class="campo">Data<input type="date" name="data"></label>
+          <label class="campo">Cidade / local<input name="local" required></label>
+          <label class="campo campo-largo">Contacto (telemóvel ou e-mail)<input name="contacto" autocomplete="email" required></label>
+          <label class="campo campo-largo">Mensagem<textarea name="mensagem" rows="3" placeholder="Hora, duração do set, condições, outros artistas…"></textarea></label>
+        </div>
+
+        <p class="contratar-erro" id="contratar-erro" role="alert" hidden></p>
+        <div class="acoes">
+          <button type="submit" class="botao">Enviar pedido no Instagram</button>
+        </div>
+
+        <div class="contratar-feito" id="contratar-feito" hidden>
+          <p><strong>O pedido foi copiado.</strong> Abrimos a conversa com @csp.mob no Instagram: cola a mensagem (Ctrl+V) e envia.</p>
+          <p class="contratar-mostra" id="contratar-mostra"></p>
+          <div class="acoes">
+            <a class="botao" id="contratar-abrir" href="https://ig.me/m/csp.mob" target="_blank" rel="noopener">Abrir o Instagram</a>
+            <button type="button" class="botao botao-linha" id="contratar-copiar">Copiar outra vez</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <section class="seccao" aria-labelledby="titulo-passados">
+      <div class="seccao-titulo">
+        <h2 id="titulo-passados" class="cromado">Já passou</h2>
+      </div>
+      <ol class="passados">
+        <li>
+          <time datetime="2026-11-07">07 nov 2026</time>
+          <div><h3>LOOP · Festival de Música Urbana</h3><p>São Pedro de Rates, Póvoa de Varzim.</p></div>
+          <a href="https://www.instagram.com/p/DfR7h91IISl/" target="_blank" rel="noopener">Ver no Instagram →</a>
+        </li>
+        <li>
+          <time datetime="2026-06-20">20 jun 2026</time>
+          <div><h3>Norte Culture · Trap &amp; Drill · Norte Color</h3><p>Porto. Com Iceboy 085 e DJ Bófia nos pratos.</p></div>
+          <a href="https://www.instagram.com/p/DZkumfHIcZo/" target="_blank" rel="noopener">Ver o cartaz →</a>
+        </li>
+        <li>
+          <time datetime="2026-06-12">12 jun 2026</time>
+          <div><h3>GYM Bar 748 · Amial</h3><p>Com Almeida GRG, Italo, Ele É Proof, Bruno Jackson e Nuts.</p></div>
+          <a href="arquivo.html">Ver o Arquivo 002 →</a>
+        </li>
+        <li>
+          <time datetime="2026-02-07">07 fev 2026</time>
+          <div><h3>Casa dos Salgueiros</h3><p>Com High Tropa, Proof, C.H.A.P.O., Nuts e Pepinz.</p></div>
+          <a href="arquivo.html">Ver o Arquivo 001 →</a>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-grelha">
+      <img class="rodape-logo" src="img/logo.webp" alt="CSP MOB" width="512" height="512" loading="lazy">
+      <ul>
+        <li><a href="https://www.youtube.com/@CSPMob" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://open.spotify.com/album/1EQ5ZuNoMPtYdLLt9ZWT6C" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://www.instagram.com/csp.mob/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="contactos.html">Contactos e booking</a></li>
+      </ul>
+    </div>
+    <p class="rodape-fim">© <span data-ano></span> CSP MOB · Cosyä · Skully G · Pura</p>
+  </footer>
+
+  <script src="js/agenda.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/contratar.js"></script>
+</body>
+</html>
