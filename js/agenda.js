@@ -17,7 +17,7 @@ const AGENDA = [
   {
     tipo: "concerto",
     titulo: "Ao vivo",
-    data: "2026-12-03T00:00",
+    data: "2026-12-05T00:00",
     horaCerta: false,
     link: "concertos.html",
   },
