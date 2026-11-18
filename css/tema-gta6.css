@@ -42,9 +42,7 @@ body {
 .botao-linha { background: transparent; border-color: var(--gta-rosa); color: #fff; }
 .botao-linha:hover { background: var(--gta-sol); border-color: transparent; color: #1a0a24; }
 
-/* Faixa do concerto (a faixa da nova música no topo fica como no estilo normal: branca) */
-.faixa-concerto { background: var(--gta-sol); color: #1a0a24; }
-.faixa-concerto:hover { background: linear-gradient(100deg, #ffc46b 0%, #ff7d5f 28%, #ff4c9f 58%, #b45ae8 100%); }
+/* A faixa da nova música (topo) e a do próximo concerto ficam como no estilo normal: brancas */
 
 /* Topo: néon rosa e roxo */
 .topo {
