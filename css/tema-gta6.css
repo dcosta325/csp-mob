@@ -42,11 +42,9 @@ body {
 .botao-linha { background: transparent; border-color: var(--gta-rosa); color: #fff; }
 .botao-linha:hover { background: var(--gta-sol); border-color: transparent; color: #1a0a24; }
 
-/* Faixa da contagem e faixa do concerto */
-.proximo-evento, .faixa-concerto { background: var(--gta-sol); color: #1a0a24; }
-.proximo-evento:hover, .faixa-concerto:hover { background: linear-gradient(100deg, #ffc46b 0%, #ff7d5f 28%, #ff4c9f 58%, #b45ae8 100%); }
-.pe-etiqueta { color: #fff; text-shadow: 0 0 6px rgb(120 0 60 / .6); }
-.pe-relogio { background: #1a0a24; color: var(--gta-ouro); }
+/* Faixa do concerto (a faixa da nova música no topo fica como no estilo normal: branca) */
+.faixa-concerto { background: var(--gta-sol); color: #1a0a24; }
+.faixa-concerto:hover { background: linear-gradient(100deg, #ffc46b 0%, #ff7d5f 28%, #ff4c9f 58%, #b45ae8 100%); }
 
 /* Topo: néon rosa e roxo */
 .topo {
