@@ -1,0 +1,86 @@
+/*
+  TEMA GTA 6 — temporário, para o lançamento da música "GTA 6 CSP MOB" e do videojogo.
+  Cores tiradas da capa: pôr do sol laranja → rosa → roxo.
+  Este ficheiro só se sobrepõe ao estilo.css (as cores normais ficam lá intactas).
+  Para voltar às cores normais: em ferramentas/gerar.py pôr TEMA = None e gerar as páginas.
+*/
+:root {
+  --gta-ouro: #ffd27a;
+  --gta-laranja: #ff8a3d;
+  --gta-rosa: #ff2f8e;
+  --gta-roxo: #a23ce0;
+  --gta-noite: #2a0d47;
+  --gta-sol: linear-gradient(100deg, #ffb347 0%, #ff6a4d 28%, #ff2f8e 58%, #a23ce0 100%);
+
+  --preto: #12081f;
+  --carvao: #1c0e2e;
+  --betao: #27123d;
+  --texto: #fff1ea;
+  --suave: #d3a9cf;
+  --linha: rgb(255 110 190 / .2);
+  --cromado: linear-gradient(180deg, #fff3c4 0%, #ffd27a 22%, #ff8a3d 45%, #ff2f8e 70%, #b23ce0 100%);
+  --azul: #ff2f8e;
+
+  /* néon do topo passa a rosa */
+  --neon: #fff0f8;
+  --neon-cor: #ff2f8e;
+  --neon-luz: 0 0 1px #fff, 0 0 4px #fff, 0 0 9px #ff8ac4, 0 0 18px var(--neon-cor), 0 0 34px var(--neon-cor), 0 0 60px #a23ce0;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 120% 60% at 50% 0%, rgb(255 106 77 / .16), transparent 60%),
+    linear-gradient(180deg, var(--gta-noite) 0, var(--preto) 70vh) fixed;
+}
+
+.etiqueta::before { color: var(--gta-rosa); }
+:focus-visible { outline-color: var(--gta-ouro); }
+
+/* Botões: o pôr do sol */
+.botao { background: var(--gta-sol); border-color: transparent; color: #1a0a24; }
+.botao:hover { background: transparent; border-color: var(--gta-rosa); color: #fff; }
+.botao-linha { background: transparent; border-color: var(--gta-rosa); color: #fff; }
+.botao-linha:hover { background: var(--gta-sol); border-color: transparent; color: #1a0a24; }
+
+/* Faixa da contagem e faixa do concerto */
+.proximo-evento, .faixa-concerto { background: var(--gta-sol); color: #1a0a24; }
+.proximo-evento:hover, .faixa-concerto:hover { background: linear-gradient(100deg, #ffc46b 0%, #ff7d5f 28%, #ff4c9f 58%, #b45ae8 100%); }
+.pe-etiqueta { color: #fff; text-shadow: 0 0 6px rgb(120 0 60 / .6); }
+.pe-relogio { background: #1a0a24; color: var(--gta-ouro); }
+
+/* Topo: néon rosa e roxo */
+.topo {
+  background:
+    radial-gradient(ellipse 40% 140% at 8% 50%, rgb(255 47 142 / .24), transparent 70%),
+    linear-gradient(rgb(22 8 36 / .95), rgb(22 8 36 / .95));
+  border-bottom-color: rgb(255 47 142 / .5);
+  box-shadow: 0 1px 14px rgb(255 47 142 / .35);
+}
+.topo-logo img { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #ff8ac4) drop-shadow(0 0 10px var(--neon-cor)) drop-shadow(0 0 22px #a23ce0); }
+.topo nav a { color: rgb(255 170 215 / .72); text-shadow: 0 0 4px rgb(255 47 142 / .7), 0 0 12px rgb(162 60 224 / .5); }
+.menu-botao { box-shadow: 0 0 2px #fff, 0 0 6px #ff8ac4, 0 0 16px var(--neon-cor), 0 0 32px #a23ce0, inset 0 0 6px #ff8ac4, inset 0 0 14px rgb(255 47 142 / .7); }
+.menu-botao:hover { background: rgb(255 47 142 / .15); }
+@media (max-width: 1280px) {
+  .js .topo nav { background: rgb(22 8 36 / .98); border-bottom-color: rgb(255 47 142 / .5); }
+}
+
+/* Início: céu ao pôr do sol */
+.heroi {
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 100%, rgb(255 106 77 / .35), transparent 70%),
+    linear-gradient(180deg, #2a0d47 0%, #5b1a6b 45%, #b8336e 78%, #ff7a4d 100%);
+}
+.heroi-nomes span { color: var(--gta-ouro); }
+.heroi-lancamento { color: #ffe3f1; }
+.heroi-capa {
+  position: relative; display: block; width: min(80vw, 52svh, 480px); margin-inline: auto;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / .35), 0 0 0 10px #1a0a24, 0 0 0 11px rgb(255 47 142 / .5), 0 30px 80px rgb(26 10 36 / .8), 0 0 120px rgb(255 47 142 / .45);
+  transition: transform .3s;
+}
+.heroi-capa img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.heroi-capa:hover { transform: rotate(-1deg) scale(1.02); }
+
+/* Pormenores */
+.cronologia li::after { background: var(--gta-rosa); }
+.lancamento-capa { box-shadow: 0 0 0 1px rgb(255 47 142 / .5), 0 24px 60px rgb(255 47 142 / .25); }
+.redes a:hover { background: rgb(255 47 142 / .12); }
